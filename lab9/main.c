@@ -47,7 +47,7 @@ int main() {
     int i0 = 10, j0 = 20, l0 = -1;
     int i = i0, j = j0, l = l0, i_prev = i, j_prev = j, l_prev = l;
 
-    for (int k = 0; k < 50; k++) {
+    for (int k = 0; k <= 50; k++) {
         i_prev = i;
         j_prev = j;
         l_prev = l;
