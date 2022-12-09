@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 
 int main() {
     const int max_size = 8;
@@ -6,10 +7,10 @@ int main() {
     int m[max_size][max_size];
 
     // считывание данных и поиск минимального/максимального элемента
-    int min_elem_val = 100000000;
+    int min_elem_val = INT_MAX;
     int min_elem_i = -1;
     int min_elem_j = -1;
-    int max_elem_val = -100000000;
+    int max_elem_val = INT_MIN;
     scanf("%d\n", &n);
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
