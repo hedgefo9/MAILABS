@@ -5,13 +5,11 @@ int main() {
     int n;
     int m[max_size][max_size];
 
-    // считывание данных
+    // считывание данных и поиск минимального/максимального элемента
     int min_elem_val = 100000000;
     int min_elem_i = -1;
     int min_elem_j = -1;
-
     int max_elem_val = -100000000;
-
     scanf("%d\n", &n);
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -26,6 +24,8 @@ int main() {
             }
         }
     }
+    // замена строк с максимальным элементом на строку с
+    // минимальным элементом (при этом номер строки минимальный)
     for (int i = 0; i < n; i++) {
         int flag_row_contains_max_elem = 0;
         for (int j = 0; j < n; j++) {
@@ -39,6 +39,7 @@ int main() {
             m[i][j] = m[min_elem_i][j];
         }
     }
+    // вывод матрицы
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             printf("%d ", m[i][j]);
